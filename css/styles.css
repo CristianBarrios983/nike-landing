@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+
+    background: #3A1C71;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header header"
+    "section1 section2"
+    "footer footer";
+}
+
+header{
+    padding: .3rem 2rem;
+    grid-area: header;
+}
+
+.header__img{
+    width: 100px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__link{
+    list-style: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.nav__link:hover{
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    transition: ease;
+}
+
+.main{
+    display: flex;
+}
+
+.main__texts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 2rem 3.5rem 0 3.5rem;
+    grid-area: section1;
+}
+
+.main__title{
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.main__paragraph{
+    font-size: 1rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.main__link {
+    border: 0;
+    text-align: center;
+    display: inline-block;
+    padding: 14px;
+    width: 165px;
+    margin: 7px 0;
+    color: #ffffff;
+    background-color: black;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: box-shadow 200ms ease-out;
+  }
+
+  .main__link:hover{
+    background-color: white;
+    color: black;
+  }
+
+
+.main__shoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: section2;
+}
+
+.main__shoes > img{
+    width: 85%;
+
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.shoes{
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.shoes__nike{
+    width: 110px;
+    height: 110px;
+}
+
+.shoes__nike > img{
+    width: 100%;
+    height: 100%;
+    transform: rotate(-15deg);
+}
+
+.shoes__img2{
+    filter:hue-rotate(70deg);
+}
+
+.shoes__img3{
+    filter:hue-rotate(120deg);
+}
+
+.shoes__img4{
+    filter:hue-rotate(250deg);
+}
+
+.shoes__nike > img:hover{
+    transform: scale(1.1) rotate(-10deg);
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+@keyframes movement {
+    0% {
+      transform: translateY(0) rotate(-10deg);
+    }
+
+    25% {
+        transform: translateY(25px) rotate(-10deg);
+    }
+  
+    50% {
+      transform: translateY(50px) rotate(-10deg);
+    }
+
+    75% {
+        transform: translateY(25px) rotate(-10deg);
+    }
+
+    100% {
+        transform: translateY(0)rotate(-10deg);
+    }
+  }
+
+
+  @media (max-width:700px){
+    .container{
+        height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "header"
+        "section2"
+        "section1"
+        "footer";
+    }
+    header{
+        padding: .2rem 1.5rem;
+    }
+
+    .header__img{
+        width: 80px;
+    }
+
+    .nav__ul{
+        gap: 1rem;
+    }
+
+    .nav__link{
+        list-style: none;
+        color: white;
+        font-size: 1rem;
+    }
+
+    .main{
+        display: flex;
+    }
+
+    .main__texts{
+        padding: 1.5rem 2.5rem 0 2.5rem;
+        margin-bottom: 1rem;
+        display: grid;
+        place-items: center;
+    }
+
+    .main__title{
+        font-size: 2.5rem;
+    }
+
+    .main__paragraph{
+        font-size: .9rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .main__shoes{
+        margin-bottom: 2.4rem;
+    }
+
+    .shoes__nike{
+        width: 80px;
+        height: 80px;
+    }
+
+  }
+
+
+
