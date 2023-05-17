@@ -54,8 +54,9 @@ nav{
 }
 
 .nav__link:hover{
+    color: #D76D77;
     cursor: pointer;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #D76D77;
     transition: ease;
 }
 
@@ -76,11 +77,12 @@ nav{
     font-size: 4.5rem;
     text-transform: uppercase;
     margin-bottom: 15px;
+    color: #280c0c;
 }
 
 .main__paragraph{
     font-size: 1rem;
-    color: black;
+    color: #280c0c;
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -93,16 +95,16 @@ nav{
     width: 165px;
     margin: 7px 0;
     color: #ffffff;
-    background-color: black;
+    background-color: #280c0c;
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     transition: box-shadow 200ms ease-out;
   }
 
   .main__link:hover{
     background-color: white;
-    color: black;
+    color: #280c0c;
   }
 
 
@@ -122,6 +124,14 @@ nav{
     animation-iteration-count: infinite;
 }
 
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    grid-area: footer;
+}
+
 .shoes{
     display: flex;
     justify-content: center;
@@ -129,8 +139,9 @@ nav{
 }
 
 .shoes__nike{
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
 }
 
 .shoes__nike > img{
@@ -155,10 +166,23 @@ nav{
     transform: scale(1.1) rotate(-10deg);
 }
 
-footer{
-    grid-area: footer;
+.social__media{
+    display: flex;
+    gap: 20px;
 }
 
+.social__link{
+    color: white;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.social__link:hover{
+    color: #D76D77;
+}
 
 @keyframes movement {
     0% {
@@ -238,9 +262,23 @@ footer{
         margin-bottom: 2.4rem;
     }
 
+    footer{
+        padding: 2rem 2rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
     .shoes__nike{
         width: 80px;
         height: 80px;
+    }
+
+    .social__media{
+        gap: 15px;
+    }
+
+    .social__link{
+        font-size: 1rem;
     }
 
   }
