@@ -263,7 +263,7 @@ footer{
     }
 
     footer{
-        padding: 2rem 2rem;
+        padding: 2rem 0;
         flex-direction: column;
         gap: 2rem;
     }
@@ -281,6 +281,32 @@ footer{
         font-size: 1rem;
     }
 
+  }
+
+  @media (max-width:350px){
+    .shoes{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 
+        "shoes1 shoes2"
+        "shoes3 shoes4";
+    }
+
+    .shoes__nike--1{
+        grid-area: shoes1;
+    }
+
+    .shoes__nike--2{
+        grid-area: shoes2;
+    }
+
+    .shoes__nike--3{
+        grid-area: shoes3;
+    }
+
+    .shoes__nike--4{
+        grid-area: shoes4;
+    }
   }
 
 
